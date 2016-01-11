@@ -1,0 +1,26 @@
+<ion-view view-title="{{ctrl.item.name}}">
+  <!-- do you want padding -->
+  <ion-content class="padding">
+
+    <!-- content goes here -->
+    <img ng-src="{{ctrl.item.img}}" style="width: 100%; max-width: 200px">
+    <p>
+      {{ctrl.item.desc}}
+    </p>
+    <label class="item item-input item-select">
+      <div class="input label">
+        ${{ctrl.prices[ctrl.selectedQuantity]}}
+      </div>
+      <select data-ng-model="ctrl.selectedQuantity">
+        <option value="eighth">Eighth (3.5g)</option>
+        <option value="quarter">Quarter (7g)</option>
+        <option value="half">Half (14g)</option>
+        <option value="ounce">Ounce (28g)</option>
+      </select>
+    </label>
+    <button class="button icon icon-left ion-android-cart button-block button-balanced button-outline" data-ng-click="ctrl.addToCart()">
+      Add To Cart!
+    </button>
+
+  </ion-content>
+</ion-view>

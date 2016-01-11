@@ -1,0 +1,15 @@
+<ion-view view-title="Order">
+  <ion-content>
+
+    <!-- content goes here -->
+    <ion-list>
+      <ion-item collection-repeat="item in ctrl.list"
+        class="item-remove-animate item-avatar item-icon-right"
+        type="item-text-wrap">
+        <img src="{{item.img}}">
+        <h2>{{item.name}}</h2>
+        <p>${{item.price}} | Size: {{item.size}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
