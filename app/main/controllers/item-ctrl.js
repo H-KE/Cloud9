@@ -13,7 +13,7 @@ angular.module('main')
 	var self = this;
 	var grade = this.item.grade;
 
-	_.each(Constants.SIZE, function(size) {
+	_.each (Constants.SIZE, function(size) {
 		switch (size) {
 			case Constants.SIZE.EIGHTH:
 				self.prices[size] = grade;
@@ -28,7 +28,7 @@ angular.module('main')
 				self.prices[size] = grade * 8 * 0.9;
 				break;
 			}
-	})
+	});
 
 	this.addToCart = function () {
 		this.item.size = this.selectedQuantity;
@@ -37,8 +37,8 @@ angular.module('main')
 		ShoppingCart.addItem(this.item);
 
 		var alertPopup = $ionicPopup.alert({
-	     title: 'Success',
-	     template: 'Added to cart.'
-	   });
+			title: 'Success',
+			template: 'Added to cart.'
+		});
 	};
 });

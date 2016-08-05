@@ -33,13 +33,13 @@ angular.module('main')
    		});
 
 		confirmPopup.then(function(res) {
-			if(res) {
+			if (res) {
 				var order = {
 					name: "John Doe",
 					address: "123 Main Street",
 					total: self.price,
 					list: self.list
-				}
+				};
 				OrderService.pushOrder(order);
 				console.log(OrderService.getOrders());
 				ShoppingCart.clearShoppingCart();
@@ -48,7 +48,7 @@ angular.module('main')
 		   		console.log('You are not sure');
 	 		}
 		});
-	}
+	};
 
 	this.calculateTotal(this, this.list);
 
